@@ -4,7 +4,7 @@ import Home from '../components/Home/Home.jsx'
 
 const Routing = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/LuisZapata">
       <Routes>
         <Route path='/' element={<Home/>}/>
       </Routes>
