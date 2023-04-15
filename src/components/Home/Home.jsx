@@ -25,7 +25,7 @@ const Home = () => {
               <p className="hello">Hola, me llamo</p>
               <h1 className="name-title">Luis Zapata</h1>
               <p className="introduction">Soy estudiante de ingenieria de sistemas y desarrollador back-end
-                continuamente estoy creando productos digitales para que contentan
+                continuamente estoy creando productos digitales que contentan
                 una buena experiencia y sean de utilidad para las personas
               </p>
             </div>
