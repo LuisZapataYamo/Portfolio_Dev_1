@@ -1,0 +1,24 @@
+:root {
+  --blue-black: #152C34;
+  --blue-soft: #86CFDE;
+  --white: #F3F2EF;
+  --white-soft: #A4B3B0;
+
+}
+
+html{
+  font-family: 'Arial', serif;
+  font-size: 62.5%;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100vw;
+  height: auto;
+  background-color: var(--blue-black);
+}
