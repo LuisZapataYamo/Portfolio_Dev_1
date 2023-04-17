@@ -19,6 +19,5 @@ html{
 
 body{
   width: 100vw;
-  height: auto;
-  background-color: var(--blue-black);
+  overflow-x: hidden;
 }
