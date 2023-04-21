@@ -1,23 +1,27 @@
 import './Home.css'
 
 import logoHomeSvg from '../../assets/img/svg/logohome.svg'
-import perfilPNG from '../../assets/img/png/perfil.png'
+import perfilPNG from '../../assets/img/png/perfil_2.png'
+import untelsPNG from '../../assets/img/png/untels-logo.png'
 import cubeGif from '../../assets/img/cube3d.gif'
+
 import { ReactComponent as LinkedinSvg } from '../../assets/img/svg/linkedin-logo.svg'
 import { ReactComponent as GithubSvg } from '../../assets/img/svg/github-logo.svg'
 import SphereContent from '../SphereContent/SphereContent.jsx'
 
 const Home = () => {
   return (
-    <div className='main'>
+    <div className="main">
       <div className="header-home">
-        <img src={logoHomeSvg} alt="logo-home"/>
-        <ul className="navbar-home">
-          <li>Sobre mi</li>
-          <li>Educación</li>
-          <li>Experiencia</li>
-          <li className="button-blog">Blog</li>
-        </ul>
+        <div className="content">
+          <img src={logoHomeSvg} alt="logo-home"/>
+          <ul className="navbar-home">
+            <li>Sobre mi</li>
+            <li>Educación</li>
+            <li>Experiencia</li>
+            <li className="button-blog">Blog</li>
+          </ul>
+        </div>
       </div>
       <div className="main-home">
         <div className="content-front-page">
@@ -60,31 +64,43 @@ const Home = () => {
         <div className="skills">
           <div className="content-text">
             <h2>Habilidades</h2>
-            <p>Tengo experiencia en la creación de aplicaciones web y la automatización de procesos utilizando
-              diferentes herramientas tecnológicas. En particular, he trabajado con Django Rest framework, lo que me
-              permite crear aplicaciones web escalables y robustas. Además, he utilizado Selenium para la realización de
-              pruebas automatizadas en la web, lo que me permite optimizar y mejorar la eficiencia de los procesos.
+            <p>Tengo experiencia en la creación de aplicaciones web escalables y robustas utilizando herramientas
+              tecnológicas como Django Rest framework. Además, he utilizado Selenium para optimizar y mejorar la
+              eficiencia de los procesos mediante pruebas automatizadas en la web.
             </p>
             <p>También he trabajado con Python, Pandas, HTML y CSS para el análisis y manipulación de datos, lo que me
               permite extraer información valiosa a partir de grandes conjuntos de datos y crear diseños web atractivos.
-              Por último, tengo experiencia en el manejo de Git para el trabajo colaborativo en proyectos de software.</p>
+              Por último, tengo experiencia en el manejo de Git para el trabajo colaborativo en proyectos de
+              software.</p>
           </div>
           <SphereContent lista={[
-            "Python",
-            "Django",
-            "Django REST",
-            "HTML",
-            "CSS",
-            "Git",
-            "PostgreSQL",
-            "Three.js",
-            "Java",
-            "C++",
-            "Selenium",
-            "Pandas",
-            "Figma",
-            "JavaScript"
-          ]} />
+            'Python',
+            'Django',
+            'Django REST',
+            'HTML',
+            'CSS',
+            'Git',
+            'PostgreSQL',
+            'Three.js',
+            'Java',
+            'C++',
+            'Selenium',
+            'Pandas',
+            'Figma',
+            'JavaScript'
+          ]} color={'#F3F2EF'}/>
+        </div>
+        <div className="education">
+          <h2>Educacion</h2>
+          <div className="study">
+            <div className="text-study">
+              <h3>Universidad Nacional Tecnologica de Lima Sur</h3>
+              <p>Estudios en Ingenieria de Sistemas | 2019 - Provisto a finalizar en 2023</p>
+            </div>
+            <div className="logo">
+              <img src={untelsPNG} alt=""/>
+            </div>
+          </div>
         </div>
       </div>
     </div>
