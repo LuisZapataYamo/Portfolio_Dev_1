@@ -3,12 +3,12 @@ import './SphereContent.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
-const SphereContent = ({ lista }) => {
+const SphereContent = ({ lista , color}) => {
   useEffect(() => {
     const loader = new THREE.FontLoader();
     const canvas = document.querySelector("canvas.webgl");
     const tecnologias = lista;
-
+    const colorText = color
     const scene = new THREE.Scene();
 
     const sizes = {
@@ -56,7 +56,7 @@ const SphereContent = ({ lista }) => {
       new THREE.MeshBasicMaterial({
         wireframe: true,
         visible: false,
-        color: "#E5DCC3",
+        color: colorText,
       })
     );
 
@@ -69,7 +69,7 @@ const SphereContent = ({ lista }) => {
 
     const textos = [];
 
-    const textMaterial = new THREE.MeshBasicMaterial({ color: "#E5DCC3" });
+    const textMaterial = new THREE.MeshBasicMaterial({ color: colorText });
 
     let loadCheck = false;
 
@@ -178,8 +178,8 @@ const SphereContent = ({ lista }) => {
         quaternion = group.quaternion.clone();
         quaternionMesh.setFromAxisAngle({ x: -cursor.y, y: cursor.x, z: 0 }, angle);
         quaternion.slerp(quaternionMesh, 0.02);
-        group.rotation.x += 0.02;
-        group.rotation.y += 0.02;
+        group.rotation.x += 0.01;
+        group.rotation.y += 0.01;
       }
 
       renderer.render(scene, camera);
