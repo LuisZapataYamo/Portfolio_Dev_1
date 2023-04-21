@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import './SphereContent.css'
 import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 const SphereContent = ({ lista , color}) => {
   useEffect(() => {
@@ -75,7 +74,7 @@ const SphereContent = ({ lista , color}) => {
 
     for (let i = 0; i < tecnologias.length; i++) {
       loader.load(
-        "/fonts/helvetiker_regular.typeface.json",
+        "/LuisZapata/fonts/helvetiker_regular.typeface.json",
         (font) => {
           const textGeometry = new THREE.TextGeometry(tecnologias[i], {
             font: font,
