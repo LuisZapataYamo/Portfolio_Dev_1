@@ -117,7 +117,7 @@ div.main-home div.front-page ul.list-buttoms {
     align-items: center;
 }
 
-div.main-home div.front-page ul.list-buttoms li {
+div.main-home div.front-page ul.list-buttoms li a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,6 +126,10 @@ div.main-home div.front-page ul.list-buttoms li {
     height: 3rem;
     background-color: var(--blue-black);
     border-radius: 2rem;
+}
+
+div.main-home div.front-page ul.list-buttoms li a:hover{
+    box-shadow: 0px 0px 10px 1px var(--blue-black);
 }
 
 div.main-home div.front-page ul.list-buttoms li .icon,
@@ -340,6 +344,7 @@ div.main-home div.worked div.work > div.text-work > div.features > ul.tags{
 
 div.main-home div.worked div.work > div.logo > img{
     height: 8rem;
-    margin-right: 10rem;
+    margin-right: 13rem;
     filter: invert(84%) sepia(18%) saturate(752%) hue-rotate(148deg) brightness(91%) contrast(90%);
+
 }
