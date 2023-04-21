@@ -3,22 +3,34 @@ import './Home.css'
 import logoHomeSvg from '../../assets/img/svg/logohome.svg'
 import perfilPNG from '../../assets/img/png/perfil_2.png'
 import untelsPNG from '../../assets/img/png/untels-logo.png'
+import valhallaPNG from '../../assets/img/png/valhalla.png'
 import cubeGif from '../../assets/img/cube3d.gif'
 
 import { ReactComponent as LinkedinSvg } from '../../assets/img/svg/linkedin-logo.svg'
 import { ReactComponent as GithubSvg } from '../../assets/img/svg/github-logo.svg'
 import SphereContent from '../SphereContent/SphereContent.jsx'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+  const navigate = useNavigate()
+  const handleClick = (event, id) => {
+    event.preventDefault();
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      element.scrollIntoView({ "behavior": "smooth" });
+    }, 300)
+  }
+
+
   return (
     <div className="main">
       <div className="header-home">
         <div className="content">
           <img src={logoHomeSvg} alt="logo-home"/>
           <ul className="navbar-home">
-            <li>Sobre mi</li>
-            <li>Educación</li>
-            <li>Experiencia</li>
+            <li><a href="#about" onClick={(event) => handleClick(event, 'about')}>Sobre mi</a></li>
+            <li><a href="#worked" onClick={(event) => handleClick(event, 'worked')}>Experiencia</a></li>
+            <li><a href="#education" onClick={(event) => handleClick(event, 'education')}>Educación</a></li>
             <li className="button-blog">Blog</li>
           </ul>
         </div>
@@ -50,7 +62,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="about">
+        <div className="about" id='about'>
+          <div className='content-about'>
           <div className="content-text">
             <h2>Sobre mi</h2>
             <p>Joven estudiante de ingeniería de sistemas capaz, carismático, respetuoso y productivo con ganas de
@@ -60,39 +73,65 @@ const Home = () => {
               compartir conocimientos.</p>
           </div>
           <img src={perfilPNG} alt=""/>
-        </div>
-        <div className="skills">
-          <div className="content-text">
-            <h2>Habilidades</h2>
-            <p>Tengo experiencia en la creación de aplicaciones web escalables y robustas utilizando herramientas
-              tecnológicas como Django Rest framework. Además, he utilizado Selenium para optimizar y mejorar la
-              eficiencia de los procesos mediante pruebas automatizadas en la web.
-            </p>
-            <p>También he trabajado con Python, Pandas, HTML y CSS para el análisis y manipulación de datos, lo que me
-              permite extraer información valiosa a partir de grandes conjuntos de datos y crear diseños web atractivos.
-              Por último, tengo experiencia en el manejo de Git para el trabajo colaborativo en proyectos de
-              software.</p>
           </div>
-          <SphereContent lista={[
-            'Python',
-            'Django',
-            'Django REST',
-            'HTML',
-            'CSS',
-            'Git',
-            'PostgreSQL',
-            'Three.js',
-            'Java',
-            'C++',
-            'Selenium',
-            'Pandas',
-            'Figma',
-            'JavaScript'
-          ]} color={'#F3F2EF'}/>
+          <div className="skills" id='skills'>
+            <SphereContent lista={[
+              'Python',
+              'Django',
+              'Django REST',
+              'HTML',
+              'CSS',
+              'Git',
+              'PostgreSQL',
+              'Three.js',
+              'Java',
+              'C++',
+              'Selenium',
+              'Pandas',
+              'Figma',
+              'JavaScript'
+            ]} color={'#F3F2EF'}/>
+            <div className="content-text">
+              <h2>Habilidades</h2>
+              <p>Tengo experiencia en la creación de aplicaciones web escalables y robustas utilizando herramientas
+                tecnológicas como Django Rest framework. Además, he utilizado Selenium para optimizar y mejorar la
+                eficiencia de los procesos mediante pruebas automatizadas en la web.
+              </p>
+              <p>También he trabajado con Python, Pandas, HTML y CSS para el análisis y manipulación de datos, lo que me
+                permite extraer información valiosa a partir de grandes conjuntos de datos y crear diseños web atractivos.
+                Por último, tengo experiencia en el manejo de Git para el trabajo colaborativo en proyectos de
+                software.</p>
+            </div>
+          </div>
         </div>
-        <div className="education">
+        <div className="worked" id='worked'>
+          <h2>Experiencia</h2>
+          <div className="work">
+            <div className="text-work">
+              <h3>Desarrollador de Back-End / Soporte Tecnico <span>@<a href='https://valhalla.com.pe/' target='_blank' rel="noopener">Valhalla</a></span></h3>
+              <h4>Sept. 2022 - actualidad</h4>
+              <p>Desarrollo y mantenimiento del back-end del proyecto Valhalla. Soporte técnico de páginas webs usando WordPress y Shopify.</p>
+              <div className="features">
+                <span>Aptitudes:</span>
+                <ul className='tags'>
+                  <li>#Python</li>
+                  <li>#Django</li>
+                  <li>#Django REST framework</li>
+                  <li>#Celery</li>
+                  <li>#PostgreSQL</li>
+                  <li>#WordPress</li>
+                  <li>#Shopify</li>
+                </ul>
+              </div>
+            </div>
+            <div className="logo">
+              <img src={valhallaPNG} alt=""/>
+            </div>
+          </div>
+        </div>
+        <div className="education" id='education'>
           <h2>Educacion</h2>
-          <div className="study">
+          <div className="study" >
             <div className="text-study">
               <h3>Universidad Nacional Tecnologica de Lima Sur</h3>
               <p>Estudios en Ingenieria de Sistemas | 2019 - Provisto a finalizar en 2023</p>
@@ -104,7 +143,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-  )
+)
 }
 
 export default Home
