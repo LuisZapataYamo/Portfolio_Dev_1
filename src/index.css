@@ -9,15 +9,20 @@
 html{
   font-family: 'Arial', serif;
   font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 *{
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+
 }
 
 body{
   width: 100vw;
   overflow-x: hidden;
+}
+
+#root{
+  width: 100%;
 }
