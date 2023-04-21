@@ -5,7 +5,7 @@ const Routing = () => {
   return (
     <BrowserRouter basename="/LuisZapata">
       <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route index path='/' element={<Home/>}/>
       </Routes>
     </BrowserRouter>
   )
