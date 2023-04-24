@@ -9,7 +9,7 @@ import cubeGif from '../../assets/img/cube3d.gif'
 import { ReactComponent as LinkedinSvg } from '../../assets/img/svg/linkedin-logo.svg'
 import { ReactComponent as GithubSvg } from '../../assets/img/svg/github-logo.svg'
 import SphereContent from '../SphereContent/SphereContent.jsx'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Home = () => {
   const navigate = useNavigate()
@@ -30,7 +30,7 @@ const Home = () => {
             <li><a href="#about" onClick={(event) => handleClick(event, 'about')}>Sobre mi</a></li>
             <li><a href="#worked" onClick={(event) => handleClick(event, 'worked')}>Experiencia</a></li>
             <li><a href="#education" onClick={(event) => handleClick(event, 'education')}>Educación</a></li>
-            <li className="button-blog" onClick={(event)=> navigate('/blog/')}>Blog</li>
+            <li><Link to='/blog' className="button-blog" >Blog</Link></li>
           </ul>
         </div>
       </div>

@@ -3,7 +3,7 @@ import './HeaderBlog.css'
 import { ReactComponent as LogoSVG } from '../../../assets/img/svg/logoblog.svg'
 import { ReactComponent as ArrowLeftSVG } from '../../../assets/img/svg/arrow-left.svg'
 import { ReactComponent as SearchSVG } from '../../../assets/img/svg/search-icon.svg'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 const HeaderBlog = () => {
@@ -24,9 +24,9 @@ const HeaderBlog = () => {
     <div className="header-blog">
       <div className="content">
         <div className="content-img">
-          <a href="/">
+          <Link to="/">
             <ArrowLeftSVG id="return-home"/>
-          </a>
+          </Link>
           <LogoSVG className="logo-blog"/>
         </div>
         <div className="search">

@@ -5,7 +5,7 @@ import BlogHome from '../components/Blog/BlogHome/BlogHome.jsx'
 
 const Routing = () => {
   return (
-    <BrowserRouter basename="/LuisZapata">
+    <BrowserRouter basename="/LuisZapata/">
       <Routes>
         <Route index path='/' element={<Home/>}/>
         <Route element={<BlogLayout/>}>

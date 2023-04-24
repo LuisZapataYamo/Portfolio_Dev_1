@@ -51,7 +51,7 @@ div.header-home ul.navbar-home li a {
     color: var(--blue-black);
 }
 
-div.header-home ul.navbar-home li.button-blog {
+div.header-home ul.navbar-home li .button-blog {
     height: 4rem;
     background-color: var(--blue-black);
     font-weight: bold;
