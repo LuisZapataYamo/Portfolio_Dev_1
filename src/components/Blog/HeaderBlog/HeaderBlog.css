@@ -1,0 +1,102 @@
+div.header-blog {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue-soft);
+    border-bottom: 1px solid var(--blue-black);
+}
+
+div.header-blog > div.content {
+    width: 132rem;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+div.header-blog > div.content > div.content-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.header-blog > div.content > div.content-img > a #return-home,
+div.header-blog > div.content > div.content-img > a #return-home path {
+    height: 2.2rem;
+    fill: var(--blue-black);
+    margin-right: 1rem;
+}
+
+div.header-blog > div.content > div.content-img > a #return-home:hover {
+    filter: drop-shadow(0 0 1mm var(--blue-black));
+}
+
+div.header-blog > div.content > div.search {
+    height: 2.8rem;
+    display: flex;
+    align-items: center;
+    border-radius: 2rem;
+    border: 1px solid var(--blue-black);
+    position: relative;
+}
+
+div.header-blog > div.content > div.search > input {
+    width: 2.4rem;
+    height: 100%;
+    border: none;
+    border-radius: 2rem 0 0 2rem;
+    outline: none;
+    font-size: 1.7rem;
+    padding-left: 1rem;
+    transition: width 0.5s ease-in-out;
+    color: var(--blue-black);
+    background-color: var(--white);
+}
+
+div.header-blog > div.content > div.search > input:focus {
+    height: 100%;
+    width: 35rem;
+    caret-color: transparent;
+}
+
+div.header-blog > div.content > div.search > i {
+    position: absolute;
+    width: 1.5rem;
+    height: 0.2rem;
+    background-color: black;
+    left: 1rem;
+    bottom: 0.5rem;
+    animation-name: blink;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+    opacity: 1;
+}
+
+div.header-blog > div.content > div.search > i.hide{
+    display: none;
+}
+
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+div.header-blog > div.content > div.search > .icon-search {
+    background-color: var(--white);
+    padding: 0 1rem 0 0.2rem;
+    border-radius: 0 2rem 2rem 0;
+    height: 100%;
+    width: 1.8rem;
+}
+
