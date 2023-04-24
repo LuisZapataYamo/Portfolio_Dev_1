@@ -30,7 +30,7 @@ const Home = () => {
             <li><a href="#about" onClick={(event) => handleClick(event, 'about')}>Sobre mi</a></li>
             <li><a href="#worked" onClick={(event) => handleClick(event, 'worked')}>Experiencia</a></li>
             <li><a href="#education" onClick={(event) => handleClick(event, 'education')}>Educación</a></li>
-            <li><Link to='/blog' className="button-blog" >Blog</Link></li>
+            <li><Link to='/blog/' className="button-blog" >Blog</Link></li>
           </ul>
         </div>
       </div>
