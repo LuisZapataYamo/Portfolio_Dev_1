@@ -1,5 +1,7 @@
 div.header-blog {
+    position: sticky;
     width: 100vw;
+    height: 8rem;
     display: flex;
     align-items: center;
     justify-content: center;
