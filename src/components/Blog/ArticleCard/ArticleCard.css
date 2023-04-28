@@ -1,0 +1,43 @@
+div.article{
+    width: 90rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 5rem;
+    border: 1px solid var(--white);
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+div.article > span{
+    color: var(--white-soft);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+div.article h2{
+    font-weight: bold;
+    font-size: 2.2rem;
+    color: var(--blue-soft);
+    margin-bottom: 0.3rem;
+}
+
+div.article > ul.tags{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    color: var(--white-soft);
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+div.article > ul > li{
+    border: 1px solid var(--white-soft);
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+div.article > p{
+    color: var(--white-soft);
+}

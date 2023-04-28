@@ -10,6 +10,13 @@ const HeaderBlog = () => {
   const navigate = useNavigate()
   const [contentInput, setContentInput] = useState('')
 
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      console.log(`/blog/articles/?q=${contentInput}`);
+      navigate(`/blog/articles?q=${contentInput}`);
+    }
+  }
+
   useEffect(() => {
     const i = document.querySelector('div.search > i')
     if (contentInput !== '') {
@@ -30,7 +37,7 @@ const HeaderBlog = () => {
           <LogoSVG className="logo-blog"/>
         </div>
         <div className="search">
-          <input type="text" placeholder="" onChange={(e) => setContentInput(e.target.value)}/>
+          <input type="text" placeholder="" onChange={(e) => setContentInput(e.target.value)} onKeyPress={handleKeyPress}/>
           <i></i>
           <SearchSVG className="icon-search"/>
         </div>
