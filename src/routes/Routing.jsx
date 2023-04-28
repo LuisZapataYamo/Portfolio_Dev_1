@@ -3,6 +3,7 @@ import Home from '../components/Home/Home.jsx'
 import BlogLayout from '../components/Blog/BlogLayout/BlogLayout.jsx'
 import BlogHome from '../components/Blog/BlogHome/BlogHome.jsx'
 import Article from '../components/Blog/Article/Article.jsx'
+import SearchList from '../components/Blog/SearchList/SearchList.jsx'
 
 const Routing = () => {
   return (
@@ -12,6 +13,7 @@ const Routing = () => {
         <Route element={<BlogLayout/>}>
           <Route path='/blog/' element={<BlogHome/>}/>
           <Route path='/blog/article/:id' element={<Article/>}/>
+          <Route path='/blog/articles/' element={<SearchList/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
