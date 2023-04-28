@@ -1,0 +1,89 @@
+div.main-article {
+    max-width: 100%;
+    padding: 3rem 45rem 5rem 45rem;
+    background-color: var(--blue-black);
+    color: var(--white-soft);
+    font-family: "Segoe UI Semibold", ui-serif;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+div.main-article > div.post-info{
+    height: 5rem;
+    display: flex;
+}
+
+div.main-article > div.post-info > div.user-img {
+    width: 5rem;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+div.main-article > div.post-info > div.user-img img{
+    border-radius: 50%;
+}
+
+div.main-article > div.post-info > div.info-text {
+    height: 100%;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.main-article > div.post-info > div.info-text > span.username {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+div.main-article > h1, h2, h3 {
+    color: var(--blue-soft);
+    font-family: "Segoe UI Historic", ui-serif;
+}
+
+div.main-article > h1 {
+    font-size: 5rem;
+}
+
+div.main-article > h2 {
+    font-size: 3.5rem;
+    font-weight: normal;
+}
+
+div.main-article  a {
+    color: aquamarine;
+
+}
+
+div.main-article > p > em {
+    display: inline-block;
+    padding: 2rem;
+    border: 1px solid var(--white-soft);
+    margin: 2rem;
+}
+
+div.main-article > blockquote {
+    padding-left: 2rem;
+    border-left: 1px solid var(--white);
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+div.main-article  p  code.code-inline {
+    border-radius: 5px;
+    padding: 2px 5px;
+
+    color: #c699e3;
+}
+
+div.main-article pre{
+    margin: 1rem;
+}
+
+div.main-article ul{
+    padding-left: 2rem;
+}
