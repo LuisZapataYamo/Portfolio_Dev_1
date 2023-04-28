@@ -1,5 +1,6 @@
 div.header-blog {
     position: sticky;
+    top: 0;
     width: 100vw;
     height: 8rem;
     display: flex;

@@ -24,7 +24,7 @@ const HeaderBlog = () => {
     <div className="header-blog">
       <div className="content">
         <div className="content-img">
-          <Link to="/">
+          <Link onClick={() => navigate(-1)}>
             <ArrowLeftSVG id="return-home"/>
           </Link>
           <LogoSVG className="logo-blog"/>
