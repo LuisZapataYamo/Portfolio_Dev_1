@@ -1,7 +1,7 @@
 import './Home.css'
 
 import logoHomeSvg from '../../assets/img/svg/logohome.svg'
-import perfilPNG from '../../assets/img/png/perfil_2.png'
+import perfilPNG from '../../assets/img/png/perfil_1.png'
 import untelsPNG from '../../assets/img/png/untels-logo.png'
 import valhallaPNG from '../../assets/img/png/valhalla.png'
 import cubeGif from '../../assets/img/cube3d.gif'
@@ -73,7 +73,9 @@ const Home = () => {
               <p>Actualmente estoy trabajando en la creacion de un blog para que estudiante de mi universidad puedan
                 compartir conocimientos.</p>
             </div>
-            <img src={perfilPNG} alt=""/>
+            <picture>
+                <img src={perfilPNG} alt=""/>
+            </picture>
           </div>
           <div className="skills" id="skills">
             <SphereContent lista={[

@@ -181,12 +181,30 @@ div.main-home div.about div.content-text p {
     margin-bottom: 3.1rem;
 }
 
-div.main-home div.about img {
-    width: 24.7rem;
-    height: 24.7rem;
+div.main-home div.about > div.content-about > picture{
+    display: inline-block;
+    width: 24.3rem;
+    height: 24.3rem;
     margin-left: 28.1rem;
     margin-right: 5rem;
-    filter: invert(85%) sepia(14%) saturate(963%) hue-rotate(149deg) brightness(87%) contrast(99%);
+    border-radius: 51%;
+    background-color: var(--blue-soft);
+    position: relative;
+}
+
+div.main-home div.about > div.content-about img {
+    width: calc(100% + 0px);
+    height: calc(100% + 0.5px);
+    position: absolute;
+    object-fit: cover;
+    filter: grayscale(100%);
+    mix-blend-mode: multiply;
+    transition: filter 0.5s ease;
+}
+
+div.main-home div.about > div.content-about img:hover{
+    mix-blend-mode: normal;
+    filter: none;
 }
 
 div.main-home div.about div.skills {
@@ -221,39 +239,6 @@ div.main-home div > h2 {
     font-size: 3.5rem;
     color: var(--white);
 
-}
-
-div.main-home div.education {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-div.main-home div.education h2 {
-    width: 100%;
-    font-size: 3.5rem;
-    color: var(--white);
-}
-
-div.main-home div.education div.study {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--white-soft);
-    margin-bottom: 3rem;
-}
-
-
-div.main-home div.education div.study div.text-study h3 {
-    /*font-size: 1.9rem;*/
-    font-size: 19px;
-    color: var(--blue-soft);
-}
-
-div.main-home div.education div.study div.logo {
-    width: 12rem;
-    margin-right: 10rem;
 }
 
 div.main-home div.worked {
@@ -346,5 +331,67 @@ div.main-home div.worked div.work > div.logo > img{
     height: 8rem;
     margin-right: 13rem;
     filter: invert(84%) sepia(18%) saturate(752%) hue-rotate(148deg) brightness(91%) contrast(90%);
+    transition: filter 0.5s ease;
+}
 
+div.main-home div.worked div.work > div.logo > img:hover{
+    filter: invert(33%) sepia(92%) saturate(4198%) hue-rotate(209deg) brightness(102%) contrast(99%);
+}
+
+div.main-home div.education {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.main-home div.education h2 {
+    width: 100%;
+    font-size: 3.5rem;
+    color: var(--white);
+}
+
+div.main-home div.education div.study {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white-soft);
+    margin-bottom: 3rem;
+}
+
+
+div.main-home div.education div.study div.text-study h3 {
+    /*font-size: 1.9rem;*/
+    font-size: 19px;
+    color: var(--blue-soft);
+}
+
+div.main-home div.education div.study div.logo {
+    width: 10.4rem;
+    height: 12rem;
+    margin-right: 12rem;
+    background-color: var(--blue-soft);
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-mask-image: url("../../assets/img/png/untels-logo.png");
+    mask-image: url("../../assets/img/png/untels-logo.png");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    position: relative;
+}
+
+div.main-home div.education div.study div.logo img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: grayscale(100%);
+    mix-blend-mode: multiply;
+    transition: filter 0.5s ease;
+}
+
+div.main-home div.education div.study div.logo img:hover{
+    mix-blend-mode: normal;
+    filter: none;
 }
