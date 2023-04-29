@@ -5,7 +5,7 @@ import converTimeToLima from '../../../utils/parsers.jsx'
 
 const ArticleCard = ({ post }) => {
   return (
-    <div key={post.id} className="article">
+    <div className="article">
       <span>{converTimeToLima(post.created_at)}</span>
       <Link to={`/blog/article/${post.id}`}><h2>{post.title}</h2></Link>
       <ul className="tags">
