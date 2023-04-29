@@ -35,7 +35,7 @@ const BlogHome = () => {
       </div>
       <div className="list-articles">
         {posts?.map(post => (
-          <ArticleCard post={post}/>
+          <ArticleCard key={post.id} post={post}/>
         ))}
       </div>
     </div>
