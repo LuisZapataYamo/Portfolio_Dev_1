@@ -48,7 +48,7 @@ const Home = () => {
               </div>
               <ul className="list-buttoms">
                 <li>
-                  <a href="https://www.linkedin.com/in/luiszapatayamo/" rel='noopener' target='_blank'>
+                  <a href="https://www.linkedin.com/in/luiszapatayamodev/" rel='noopener' target='_blank'>
                     <LinkedinSvg className="icon"/>
                     <span className="button-social">Linkedin</span>
                   </a>
