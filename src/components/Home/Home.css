@@ -9,7 +9,7 @@ div.header-home {
     top: 0;
     width: 100vw;
     height: 8rem;
-    padding: 0 4rem;
+    /*padding: 0 4rem;*/
     border-bottom: solid 1px var(--blue-black);
     background-color: var(--blue-soft);
     z-index: 2;
@@ -18,6 +18,7 @@ div.header-home {
 div.header-home div.content {
     max-width: 132rem;
     height: 100%;
+    padding: 0 4rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -63,15 +64,17 @@ div.header-home ul.navbar-home li .button-blog {
 }
 
 div.main-home {
-    max-width: 100%;
+    width: 100vw;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
 }
 
-div.main-home > div {
-    width: 114.2rem;
-    max-width: 100%;
+div.main-home > div:not(.content-front-page) {
+    width: 100%;
+    max-width: 132rem;
+    padding: 4rem;
     margin: 0 auto;
     display: flex;
     justify-content: flex-start;
@@ -79,19 +82,24 @@ div.main-home > div {
 
 div.main-home div.content-front-page {
     width: 100%;
-    padding: 8rem;
+    margin: 0;
+    padding: 8rem 4rem;
     display: flex;
     justify-content: center;
     background-color: var(--blue-soft);
 }
 
 div.main-home div.front-page {
-    width: 114.2rem;
+    width: 132rem;
     font-style: italic;
+}
+
+div.main-home div.front-page > div{
     display: flex;
     flex-wrap: wrap;
     margin-top: 6.7rem;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 div.main-home div.front-page h1 {
@@ -104,7 +112,7 @@ div.main-home div.front-page p {
 }
 
 div.main-home div.front-page p.introduction {
-    width: 61.4rem;
+    max-width: 61.4rem;
     margin-top: 2rem;
 }
 
@@ -152,17 +160,22 @@ div.main-home div.front-page div.cube3d {
 }
 
 div.main-home div.about {
+    width: 100%;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding-top: 9rem;
+    padding: 5rem 4rem;
 }
 
 div.main-home div.about div.content-about {
     width: 100%;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 div.main-home div.about div.content-text {
@@ -183,10 +196,9 @@ div.main-home div.about div.content-text p {
 
 div.main-home div.about > div.content-about > picture{
     display: inline-block;
-    width: 24.3rem;
-    height: 24.3rem;
-    margin-left: 28.1rem;
-    margin-right: 5rem;
+    width: 25rem;
+    height: 25rem;
+    margin: 0 2rem;
     border-radius: 51%;
     background-color: var(--blue-soft);
     position: relative;
@@ -242,6 +254,7 @@ div.main-home div > h2 {
 }
 
 div.main-home div.worked {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -338,9 +351,41 @@ div.main-home div.worked div.work > div.logo > img:hover{
     filter: invert(33%) sepia(92%) saturate(4198%) hue-rotate(209deg) brightness(102%) contrast(99%);
 }
 
+div.main-home div.worked div.work.pya > div.logo {
+    width: 17.72rem;
+    height: 13.10rem;
+    margin-right: 12rem;
+    background-color: var(--blue-soft);
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-mask-image: url("../../assets/img/png/pya.png");
+    mask-image: url("../../assets/img/png/pya.png");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    position: relative;
+}
+
+div.main-home div.worked div.work.pya > div.logo > img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: grayscale(100%);
+    mix-blend-mode: multiply;
+    transition: filter 0.5s ease;
+}
+
+div.main-home div.worked div.work.pya > div.logo img:hover{
+    mix-blend-mode: normal;
+    filter: none;
+}
+
 div.main-home div.education {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    padding: 0 4rem;
 }
 
 div.main-home div.education h2 {

@@ -74,7 +74,7 @@ const SphereContent = ({ lista , color}) => {
 
     for (let i = 0; i < tecnologias.length; i++) {
       loader.load(
-        "/LuisZapata/fonts/helvetiker_regular.typeface.json",
+        "/Portfolio_Dev_1/fonts/helvetiker_regular.typeface.json",
         (font) => {
           const textGeometry = new THREE.TextGeometry(tecnologias[i], {
             font: font,

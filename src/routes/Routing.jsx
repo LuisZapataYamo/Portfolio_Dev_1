@@ -7,13 +7,13 @@ import SearchList from '../components/Blog/SearchList/SearchList.jsx'
 
 const Routing = () => {
   return (
-    <BrowserRouter basename="/LuisZapata/">
+    <BrowserRouter basename='/Portfolio_Dev_1/'>
       <Routes>
-        <Route index path='/' element={<Home/>}/>
-        <Route element={<BlogLayout/>}>
-          <Route path='/blog/' element={<BlogHome/>}/>
-          <Route path='/blog/article/:id' element={<Article/>}/>
-          <Route path='/blog/articles/' element={<SearchList/>}/>
+        <Route index path='/' element={<Home />} />
+        <Route element={<BlogLayout />}>
+          <Route path='/blog/' element={<BlogHome />} />
+          <Route path='/blog/article/:id' element={<Article />} />
+          <Route path='/blog/articles/' element={<SearchList />} />
         </Route>
       </Routes>
     </BrowserRouter>
