@@ -314,6 +314,7 @@ div.main-home div.worked div.work > div.text-work > h4 {
 }
 
 div.main-home div.worked div.work > div.text-work > p {
+    width: 70rem;
     color: var(--white-soft);
     font-size: 1.2rem;
 }
